@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %} Deck Touch {% endblock %}
+
+{% block content %}
+    <form method="post">
+        <label for="Deck1">Deck 1</label>
+		<div class="grid">
+			<input type="text" name="name1"
+				   placeholder="Name"
+				   value="{{ request.form['name1'] }}"></input>
+			<input type="number" name="matches1"
+				   placeholder="# Matches"
+				   value="{{ request.form['matches1'] }}"
+				   required=True></input>
+			<input type="number" name="wr1"
+				   placeholder="WR (NNNN)"
+				   value="{{ request.form['wr1'] }}"
+				   required=True></input>
+        </div>
+		<br>
+        <label for="Deck2">Deck 2</label>
+		<div class="grid">
+			<input type="text" name="name2"
+				   placeholder="Name"
+				   value="{{ request.form['name2'] }}"></input>
+			<input type="number" name="matches2"
+				   placeholder="# Matches"
+				   value="{{ request.form['matches2'] }}"
+				   required=True></input>
+			<input type="number" name="wr2"
+				   placeholder="WR (NNNN)"
+				   value="{{ request.form['wr2'] }}"
+				   required=True></input>
+        </div>
+		<div class="grid">
+			<div></div>
+			<div></div>
+			<button type="submit">Submit</button>
+			<div></div>
+			<div></div>
+		</div>	
+    </form>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="static/css/pico.css">
+    <title>{% block title %} {% endblock %} - N0SQ</title>
+</head>
+<body>
+    <nav class="container-fluid">
+		<ul>
+			<li><strong><a href="{{ url_for('index') }}">N0SQ's website</a></strong></li>
+			<li>{{ self.title() }}</li>
+		</ul>
+		<ul>
+			<li><a href="{{ url_for('deck_touch') }}">Deck Touch</a></li>
+			<li><a href="{{ url_for('two_tap') }}">Two Tap</a></li>
+		</ul>
+	</nav>
+	<main class="container">
+		<div>
+			{% for message in get_flashed_messages() %}
+				<div>{{ message }}</div>
+			{% endfor %}
+		</div>
+		<div>
+			{% block content %} {% endblock %}
+		</div>
+	</main>
+</body>
+</html>

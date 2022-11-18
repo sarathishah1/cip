@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Two Tap {% endblock %}
+
+{% block content %}
+    <form method="post">
+		<div class="grid">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<button type="submit">Swap</button>
+			<button type="submit">Export</button>
+		</div>
+		<br>
+		<div class="grid">
+			<input type="textarea" name="Left1"
+				   value="{{ request.form['left1'] }}"></input>
+			<input type="textarea" name="Right1"
+				   value="{{ request.form['right1'] }}"></input>
+        </div>
+		<br>
+		<div class="grid">
+			<input type="textarea" name="Left1"
+				   value="{{ request.form['left1'] }}"></input>
+			<input type="textarea" name="Right1"
+				   value="{{ request.form['right1'] }}"></input>
+        </div>
+    </form>
+{% endblock %}
