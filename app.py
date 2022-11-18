@@ -23,7 +23,7 @@ def deck_touch():
 		if validate_deck(deck_one) and validate_deck(deck_one):
 			win, lose, error = check_reliable(deck_one, deck_two)
 			if int(error) == 49:
-				msg = f"Sure, {win} looks better than {lose}... but there is a BIG chance you're wrong."
+				msg = f"Nope, can't be sure of anything."
 			else:
 				msg = f"Sure, {win} looks better than {lose}... but there is a {round(100-error,2)}% chance you're wrong."
 		else:
