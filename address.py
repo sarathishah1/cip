@@ -41,7 +41,7 @@ class Address:
             gdf = pickle.load(f)
 
         area = gdf[gdf.contains(self.geometry)]
-        if not area.empty():
+        if not area.empty:
             self.area_data = {k: list(v.values())[0] for k, v in area.to_dict().items()}
             self.area_id = self.area_data['YISHUV_STAT_2022']
             return self.area_id
