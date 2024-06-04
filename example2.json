@@ -1,0 +1,125 @@
+{
+    "locales": [
+        {
+            "id": 1,
+            "nombre_local": "Local name",
+            "pantallas": [
+                {
+                    "nombre_pantalla": "Screen 1",
+                    "productos": [
+                        {
+                            "nombre_producto": "Producto 1",
+                            "precio": "888888888888"
+                        },
+                        {
+                            "nombre_producto": "Producto 2",
+                            "precio": "888888888"
+                        },
+                        {
+                            "nombre_producto": "Producto 3",
+                            "precio": "8888888888"
+                        }
+                    ]
+                },
+                {
+                    "nombre_pantalla": "Screen 2",
+                    "productos": [
+                        {
+                            "nombre_producto": "Producto 4",
+                            "precio": "1"
+                        },
+                        {
+                            "nombre_producto": "Producto 5",
+                            "precio": "33"
+                        },
+                        {
+                            "nombre_producto": "Producto 6",
+                            "precio": "1111111111111111111111111111111111"
+                        }
+                    ]
+                },
+                {
+                    "nombre_pantalla": "Screen 3",
+                    "productos": [
+                        {
+                            "nombre_producto": "Producto 7",
+                            "precio": "56"
+                        },
+                        {
+                            "nombre_producto": "Producto 8",
+                            "precio": "50"
+                        }
+                    ]
+                },
+                {
+                    "nombre_pantalla": "Screen 4",
+                    "productos": [
+                        {
+                            "nombre_producto": "Producto 9",
+                            "precio": "60"
+                        },
+                        {
+                            "nombre_producto": "Producto 10",
+                            "precio": "35"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "nombre_local": "Another local name",
+            "pantallas": [
+                {
+                    "nombre_pantalla": "Screen A",
+                    "productos": []
+                },
+                {
+                    "nombre_pantalla": "Screen B",
+                    "productos": []
+                },
+                {
+                    "nombre_pantalla": "Screen C",
+                    "productos": [
+                        {
+                            "nombre_producto": "Producto 11",
+                            "precio": 49.99
+                        },
+                        {
+                            "nombre_producto": "Producto 12",
+                            "precio": 39.99
+                        }
+                    ]
+                },
+                {
+                    "nombre_pantalla": "Screen D",
+                    "productos": [
+                        {
+                            "nombre_producto": "Producto 13",
+                            "precio": 24.99
+                        },
+                        {
+                            "nombre_producto": "Producto 14",
+                            "precio": 14.99
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "nombre_local": "Caribbean",
+            "pantallas": []
+        },
+        {
+            "id": 4,
+            "nombre_local": "Caribbean",
+            "pantallas": []
+        },
+        {
+            "id": 5,
+            "nombre_local": "Caribbean 2",
+            "pantallas": []
+        }
+    ]
+}
