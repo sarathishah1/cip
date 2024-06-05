@@ -17,7 +17,3 @@ def index():
     with open('./static/example2.json', 'r') as f:
         data = json.load(f)
         return jsonify(data)
-        
-
-
-
