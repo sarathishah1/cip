@@ -13,6 +13,9 @@ def get_json():
 
 # Ruta para servir un fichero JSON estático
 @app.route('/')
-def index():
-    return send_from_directory('static', 'example2.json')
+def index():    
+    def index():
+        with open('./stactic/example2.json', 'r') as f:
+           data = json.load(f)
+    return jsonify(data)
 
