@@ -12,10 +12,12 @@ def get_json():
     }
     return jsonify(data)
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
-    with open('./stactic/example2.json', 'r') as f:
+    with open('./static/example2.json', 'r') as f:
         data = json.load(f)
         return jsonify(data)
         
+
+
 
