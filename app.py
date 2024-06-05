@@ -17,5 +17,5 @@ def index():
     with open('./stactic/example2.json', 'r') as f:
         data = json.load(f)
         return jsonify(data)
-          return jsonify(data)
+        
 
