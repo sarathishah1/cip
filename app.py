@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, send_from_directory
+import json
 
 app = Flask(__name__)
 
@@ -11,11 +12,10 @@ def get_json():
     }
     return jsonify(data)
 
-# Ruta para servir un fichero JSON estático
 @app.route('/')
-   
 def index():
-      with open('./stactic/example2.json', 'r') as f:
-          data = json.load(f)
+    with open('./stactic/example2.json', 'r') as f:
+        data = json.load(f)
+        return jsonify(data)
           return jsonify(data)
 
