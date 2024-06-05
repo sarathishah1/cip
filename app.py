@@ -14,6 +14,9 @@ def get_json():
 
 @app.route('/', methods=['GET'])
 def index():
-    with open('./static/example2.json', 'r') as f:
+    with open('static/example2.json', 'r') as f:
         data = json.load(f)
         return jsonify(data)
+    
+if __name__ == "__main__":
+    app.run()
