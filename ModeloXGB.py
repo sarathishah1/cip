@@ -183,7 +183,8 @@ Now we can head over to the actual predicting
 """
 # Make predictions using the trained model
 predictions = model.predict(user_data)
-
+print(len(predictions))
+print(predictions)
 # Print or use the predictions as needed
 def PredictByCountry(Country):
     '''
@@ -212,36 +213,36 @@ def PredictByCountry(Country):
     Slovakia = predictions[368]
     Slovenia = predictions[384]
     Spain = predictions[400]
-    Sweden = predictions[416]
+    Sweden = predictions[415]
     '''
     predictions_dict = {
-    "Austria": predictions[16],
-    "Belgium": predictions[32],
-    "Bulgaria": predictions[48],
-    "Croatia": predictions[64],
-    "Czechia": predictions[80],
-    "Denmark": predictions[96],
-    "Estonia": predictions[112],
-    "Finland": predictions[128],
-    "France": predictions[144],
-    "Germany": predictions[160],
-    "Greece": predictions[176],
-    "Hungary": predictions[192],
-    "Ireland": predictions[208],
-    "Italy": predictions[224],
-    "Latvia": predictions[240],
-    "Lithuania": predictions[256],
-    "Luxembourg": predictions[272],
-    "Malta": predictions[288],
-    "Netherlands": predictions[304],
-    "Poland": predictions[320],
-    "Portugal": predictions[336],
-    "Romania": predictions[352],
-    "Slovakia": predictions[368],
-    "Slovenia": predictions[384],
-    "Spain": predictions[400],
-    "Sweden": predictions[416]
+    "Austria": predictions[15],
+    "Belgium": predictions[31],
+    "Bulgaria": predictions[47],
+    "Croatia": predictions[63],
+    "Czechia": predictions[79],
+    "Denmark": predictions[95],
+    "Estonia": predictions[111],
+    "Finland": predictions[127],
+    "France": predictions[143],
+    "Germany": predictions[159],
+    "Greece": predictions[175],
+    "Hungary": predictions[191],
+    "Ireland": predictions[207],
+    "Italy": predictions[223],
+    "Latvia": predictions[239],
+    "Lithuania": predictions[255],
+    "Luxembourg": predictions[271],
+    "Malta": predictions[287],
+    "Netherlands": predictions[303],
+    "Poland": predictions[319],
+    "Portugal": predictions[335],
+    "Romania": predictions[351],
+    "Slovakia": predictions[367],
+    "Slovenia": predictions[383],
+    "Spain": predictions[399],
+    "Sweden": predictions[415]
 }
 
-    return 7
+    
     return predictions_dict[Country]
