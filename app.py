@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 #from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 #CORS(app)
 
 @app.route('/')
@@ -20,9 +20,7 @@ def filesUsed():
 def theProject():
     return render_template('theProject.html')
 
-@app.route('/images/<fileName>')
-def image(fileName):
-    return render_template(str(fileName)+'.jpg')
+
 
 @app.route('/process', methods=['POST'])
 def process():
