@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from ModeloXGB import PredictByCountry
+import ModeloXGB as mxgb
 #from flask_cors import CORS
 
 app = Flask(__name__, static_url_path='/static')
@@ -29,7 +30,8 @@ def process():
     pais = str(data['pais'])
     
     renta = int(data['renta'])
-    result = PredictByCountry(pais)  # Your processing logic here
+    #result = PredictByCountry(pais)  # Your processing logic here
+    result = mxgb.test(pais)
     return jsonify({'result': result})
 
 if __name__ == '__main__':

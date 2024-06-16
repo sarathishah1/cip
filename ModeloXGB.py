@@ -185,7 +185,8 @@ Now we can head over to the actual predicting
 predictions = model.predict(user_data)
 print(len(predictions))
 print(predictions)
-# Print or use the predictions as needed
+def test(string):
+    return string
 def PredictByCountry(Country):
     '''
     Austria = predictions[16]
