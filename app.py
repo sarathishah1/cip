@@ -20,6 +20,10 @@ def filesUsed():
 def theProject():
     return render_template('theProject.html')
 
+@app.route('/images/{fileName}')
+def image(fileName):
+    return render_template(str(fileName)+'.jpg')
+
 @app.route('/process', methods=['POST'])
 def process():
     data = request.json
