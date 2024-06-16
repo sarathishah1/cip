@@ -218,7 +218,7 @@ predictions_dict = {
 print(predictions_dict)
 
 def test(string):
-    return predictions[16]
+    return predictions[16].item()
 def PredictByCountry(Country):
     '''
     Austria = predictions[16]
@@ -278,4 +278,4 @@ def PredictByCountry(Country):
 }
 
     
-    return predictions_dict[Country]
+    return predictions_dict[Country].item()
