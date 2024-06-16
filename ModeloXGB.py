@@ -184,7 +184,7 @@ Now we can head over to the actual predicting
 # Make predictions using the trained model
 predictions = model.predict(user_data)
 #print(len(predictions))
-#print(predictions)
+print(predictions)
 def test(string):
     return predictions[16]
 def PredictByCountry(Country):
