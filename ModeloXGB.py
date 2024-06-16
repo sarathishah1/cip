@@ -185,6 +185,38 @@ Now we can head over to the actual predicting
 predictions = model.predict(user_data)
 #print(len(predictions))
 print(predictions)
+
+predictions_dict = {
+    "Austria": predictions[15],
+    "Belgium": predictions[31],
+    "Bulgaria": predictions[47],
+    "Croatia": predictions[63],
+    "Czechia": predictions[79],
+    "Denmark": predictions[95],
+    "Estonia": predictions[111],
+    "Finland": predictions[127],
+    "France": predictions[143],
+    "Germany": predictions[159],
+    "Greece": predictions[175],
+    "Hungary": predictions[191],
+    "Ireland": predictions[207],
+    "Italy": predictions[223],
+    "Latvia": predictions[239],
+    "Lithuania": predictions[255],
+    "Luxembourg": predictions[271],
+    "Malta": predictions[287],
+    "Netherlands": predictions[303],
+    "Poland": predictions[319],
+    "Portugal": predictions[335],
+    "Romania": predictions[351],
+    "Slovakia": predictions[367],
+    "Slovenia": predictions[383],
+    "Spain": predictions[399],
+    "Sweden": predictions[415]
+}
+
+print(predictions_dict)
+
 def test(string):
     return predictions[16]
 def PredictByCountry(Country):
