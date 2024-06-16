@@ -4,7 +4,7 @@ import xgboost as xgb
 from sklearn.metrics import mean_squared_error
 
 # Load your dataset
-data = pd.read_csv("Life_Expectancy_Data_Europe_Recodificado.csv")
+data = pd.read_csv("/static/csvs/Life Expectancy Data Europe Recodificado.csv")
 
 # Preprocessing
 # Calculate column-wise means for numeric columns
@@ -48,9 +48,9 @@ model.fit(X_train, y_train)
 # Model evaluation
 y_pred = model.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
-print("Mean Squared Error:", mse)
+#print("Mean Squared Error:", mse)
 r2score = model.score(X_test, y_test)
-print("r2score:", r2score)
+#print("r2score:", r2score)
 
 
 
@@ -59,13 +59,14 @@ print("r2score:", r2score)
 
 
 # Make predictions on new data
-user_data = pd.read_csv("webdata.csv").drop("Life_expectancy", axis=1)  # Load your new data
+user_data = pd.read_csv("/static/csvs/webdata.csv").drop("Life_expectancy", axis=1)  # Load your new data
 #user_data = pd.read_csv("Life_Expectancy_Data_Europe_Recodificado.csv").drop("Life_expectancy", axis=1)
 # Perform the same preprocessing steps as done for the training data (e.g., handle missing values, encode categorical variables)
 # Assuming 'new_data' has been preprocessed similarly as 'data'
 """
 We run the same preprocessing as the original data
 """
+
 
 
 #numeric_means = user_data.select_dtypes(include='number').mean()
