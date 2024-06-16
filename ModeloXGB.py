@@ -186,7 +186,7 @@ predictions = model.predict(user_data)
 #print(len(predictions))
 #print(predictions)
 def test(string):
-    return string
+    return predictions[16]
 def PredictByCountry(Country):
     '''
     Austria = predictions[16]
