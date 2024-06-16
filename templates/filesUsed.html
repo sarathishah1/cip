@@ -12,10 +12,10 @@
             <h1>The life expectancy project</h1>
             <nav>
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./aboutus.html">About us</a></li>
-                    <li><a href="./theProject.html">The project</a></li>
-                    <li><a href="./filesUsed.html"><b>Files</b></a></li>
+                    <li><a href={{ url_for('home') }}>Home</a></li>
+                    <li><a href={{ url_for('aboutus') }}>About</a></li>
+                    <li><a href={{ url_for('theProject') }}>The Project</a></li>
+                    <li><a href={{ url_for('filesUsed') }}><b>Files</b></a></li>
                 </ul>
             </nav>
         </header>
