@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, render_template
+from ModeloXGB import PredictByCountry
 #from flask_cors import CORS
 
 app = Flask(__name__, static_url_path='/static')
@@ -25,9 +26,10 @@ def theProject():
 @app.route('/process', methods=['POST'])
 def process():
     data = request.json
-    pais = int(data['pais'])
+    pais = str(data['pais'])
+    
     renta = int(data['renta'])
-    result = pais + renta  # Your processing logic here
+    result = PredictByCountry(pais)  # Your processing logic here
     return jsonify({'result': result})
 
 if __name__ == '__main__':

@@ -1,4 +1,4 @@
-Country,Year,Status,Life_expectancy,Adult Mortality,Alcohol,Percentage expenditure, BMI ,Under-five deaths ,Total expenditure,GDP,Population, Thinness  1-19 years, Thinness 5-9 years,Income composition of resources,Schooling,Average temperature,CO2 Emissions,Colesterol,Fumar
+Country,Year,Status,Life expectancy,Adult Mortality,Alcohol,Percentage expenditure,BMI,Under-five deaths,Total expenditure,GDP,Population,Thinness 1-19 years,Thinness 5-9 years,Income composition of resources,Schooling,Average temperature,CO2 Emissions,Colesterol,Fumar
 Austria,2000,0,78.1,96,13.2,2269.13,5.1,0,1.6,24517.26745,811566,1.7,1.9,0.833,15.4,7.99,7.9,3.9,52.3
 Austria,2001,0,78.6,92,12.4,2282.52,5.6,0,1.12,24489.73553,842293,1.7,1.9,0.837,15.5,7.04,8.4,3.9,
 Austria,2002,0,78.7,9,12.5,2497.87,51.2,0,1.27,26351.37568,881957,1.7,1.9,0.847,16.1,7.74,8.6,3.9,
