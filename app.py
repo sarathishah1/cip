@@ -7,6 +7,15 @@ CORS(app)
 @app.route('/')
 def index():
     return render_template('index.html')
+@app.route('/aboutus')
+def aboutus():
+    return render_template('aboutus.html')
+@app.route('/filesUsed')
+def filesUsed():
+    return render_template('filesUsed.html')
+@app.route('/theProject')
+def theProject():
+    return render_template('theProject.html')
 
 @app.route('/process', methods=['POST'])
 def process():
