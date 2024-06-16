@@ -243,5 +243,5 @@ def PredictByCountry(Country):
     "Sweden": predictions[416]
 }
 
-    
+    return 7
     return predictions_dict[Country]
