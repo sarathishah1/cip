@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function submitForm() {
     const pais = document.getElementById('pais').value;
-    const renta = document.getElementById('renta').value;
+    const fuma = document.getElementById('fuma').value;
 
     fetch('/process', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ pais: pais, renta: renta })
+        body: JSON.stringify({ pais: pais, fuma: fuma })
     })
     .then(response => {
         if (!response.ok) {

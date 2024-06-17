@@ -25,13 +25,23 @@ def theProject():
 
 
 @app.route('/process', methods=['POST'])
+
+
 def process():
+    yes = ["sí", "si", "correcto", "así es", "asi es", "cierto", "afirmativo", "positivo", "en efecto", "poco", "un poco", "a veces", "siempre", "mucho", "a menudo", "demasiado"]
     data = request.json
     pais = str(data['pais'])
     
-    renta = int(data['renta'])
-    result = PredictByCountry(pais)  # Your processing logic here
+    fuma = str(data['fuma']).lower()
+    if fuma in yes:
+        fuma = 0.97
+    else:
+        fuma = 1
+    result = PredictByCountry(pais) * fuma  # Your processing logic here
     #result = mxgb.test(pais)
+
+    #Redondeamos el resultado a 2 decimales
+    result = str(result)[0:4]
     return jsonify({'result': result})
 
 if __name__ == '__main__':
