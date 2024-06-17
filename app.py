@@ -12,6 +12,9 @@ def index():
 @app.route('/home')
 def home():
     return render_template('index.html')
+@app.route('/explain')
+def explain():
+    return render_template('explain.html')
 @app.route('/aboutus')
 def aboutus():
     return render_template('aboutus.html')
