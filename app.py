@@ -30,8 +30,8 @@ def process():
     pais = str(data['pais'])
     
     renta = int(data['renta'])
-    #result = PredictByCountry(pais)  # Your processing logic here
-    result = mxgb.test(pais)
+    result = PredictByCountry(pais)  # Your processing logic here
+    #result = mxgb.test(pais)
     return jsonify({'result': result})
 
 if __name__ == '__main__':
