@@ -220,34 +220,7 @@ print(predictions_dict)
 def test(string):
     return predictions[16].item()
 def PredictByCountry(Country):
-    '''
-    Austria = predictions[16]
-    Belgium = predictions[32]
-    Bulgaria = predictions[48]
-    Croatia = predictions[64]
-    Czechia = predictions[80]
-    Denmark = predictions[96]
-    Estonia = predictions[112]
-    Finland = predictions[128]
-    France = predictions[144]
-    Germany = predictions[160]
-    Grece = predictions[176]
-    Hungary = predictions[192]
-    Ireland = predictions[208]
-    Italy = predictions[224]
-    Latvia = predictions[240]
-    Lithuania = predictions[256]
-    Luxembourg = predictions[272]
-    Malta = predictions[288]
-    Netherlands = predictions[304]
-    Poland = predictions[320]
-    Portugal = predictions[336]
-    Romania = predictions[352]
-    Slovakia = predictions[368]
-    Slovenia = predictions[384]
-    Spain = predictions[400]
-    Sweden = predictions[415]
-    '''
+
     predictions_dict = {
     "Austria": predictions[15],
     "Belgium": predictions[31],
@@ -276,6 +249,42 @@ def PredictByCountry(Country):
     "Spain": predictions[399],
     "Sweden": predictions[415]
 }
-
+    paises = {"españa":"spain"
+              ,"bélgica": "belgium"
+              ,"belgica": "belgium"
+              ,"croacia":"croatia"
+              ,"chequia":"czechia"
+              ,"república checa":"czechia"
+              ,"republica checa":"czechia"
+              ,"dinamarca":"denmark"
+              ,"finlandia":"finland"
+              ,"francia":"france"
+              ,"alemania":"germany"
+              ,"grecia":"greece"
+              ,"hungría":"hungary"
+              ,"hungria":"hungary"
+              ,"irlanda":"ireland"
+              ,"italia":"italy"
+              ,"letonia":"latvia"
+              ,"lituania":"lithuania"
+              ,"luxemburgo":"luxembourg"
+              ,"países bajos":"netherlands"
+              ,"paises bajos":"netherlands"
+              ,"holanda":"netherlands"
+              ,"polonia":"poland"
+              ,"rumania":"romania"
+              ,"rumanía":"romania"
+              ,"eslovaquia":"slovakia"
+              ,"eslovenia":"slovenia"
+              ,"suecia":"sweden"}
     
+    countries = [str(key) for key in predictions_dict.keys()]
+    if Country in countries:
+        return predictions_dict[Country].item()
+    Country = str.lower(Country)
+    if Country in paises:
+        Country = paises[Country]
+    Country = str.upper(Country[0]) + Country[1:]
+    
+
     return predictions_dict[Country].item()
