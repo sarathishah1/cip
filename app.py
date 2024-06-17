@@ -25,6 +25,22 @@ def filesUsed():
 def theProject():
     return render_template('theProject.html')
 
+@app.route('/isabelle')
+def isabelle():
+    return render_template('isabelle.html')
+@app.route('/nadal')
+def nadal():
+    return render_template('nadal.html')
+@app.route('/fernanda')
+def fernanda():
+    return render_template('fernanda.html')
+@app.route('/carla')
+def carla():
+    return render_template('carla.html')
+@app.route('/michele')
+def michele():
+    return render_template('michele.html')
+
 
 
 @app.route('/process', methods=['POST'])
