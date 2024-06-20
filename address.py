@@ -47,17 +47,21 @@ class Address:
             self.area_data = {k: list(v.values())[0] for k, v in area.to_dict().items()}
             self.area_id = self.area_data['ID']
             self.area_name = self.area_data['SchName']
-            return self.area_id
 
-        raise ValueError('No area found for the point')
+        ## if no addr found
+        else:
+            self.area_id = -1
+
+        return self.area_id
+
 
     def get_area_id(self) -> int:
         self._get_address_point()
         return self._point_to_area_id()
     
 
-if __name__ == "__main__":
-    addr = Address(5, 'אז"ר', 'חיפה')
-    addr.get_area_id()
-    print(addr.area_id)
-    print(addr.area_name)
+# if __name__ == "__main__":
+#     addr = Address(111, 'סורוקה', 'חיפה')
+#     addr.get_area_id()
+#     print(addr.area_id)
+#     print(addr.area_name)
