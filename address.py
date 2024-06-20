@@ -60,8 +60,8 @@ class Address:
         return self._point_to_area_id()
     
 
-if __name__ == "__main__":
-    addr = Address(60, 'אינטרנציונל', 'חיפה')
-    addr.get_area_id()
-    print(addr.area_id)
-    print(addr.area_name)
+# if __name__ == "__main__":
+#     addr = Address(60, 'אינטרנציונל', 'חיפה')
+#     addr.get_area_id()
+#     print(addr.area_id)
+#     print(addr.area_name)
