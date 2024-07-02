@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, url_for, flash
 from utils import check_reliable, validate_deck
+import secrets
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '853131cefc6c2b9a5d0208a726f5d1c0fd37324feba21441'
+app.config['SECRET_KEY'] = secrets.token_hex(16)
 
 @app.route("/")
 def index():
