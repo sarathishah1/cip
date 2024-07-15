@@ -20,7 +20,7 @@ jobs:
 
     - name: Deploy to VM
       run: |
-        ssh -o StrictHostKeyChecking=no Aarish@172.172.151.63 << 'EOF'
+        ssh Aarish@172.172.151.63 << 'EOF'
           cd /home/Aarish/flask-hello-world
           git pull origin master
           sudo systemctl restart flaskapp
