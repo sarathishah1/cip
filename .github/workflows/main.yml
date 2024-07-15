@@ -3,7 +3,7 @@ name: Deploy to VM
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
@@ -20,8 +20,8 @@ jobs:
 
     - name: Deploy to VM
       run: |
-        ssh -o StrictHostKeyChecking=no Aarish@172.172.151.63 << 'EOF'
+        ssh StrictHostKeyChecking=no Aarish@172.172.151.63 << 'EOF'
           cd /home/Aarish/flask-hello-world
-          git pull origin main
+          git pull origin master
           sudo systemctl restart flaskapp
         EOF
