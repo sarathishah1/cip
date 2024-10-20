@@ -1,2 +1,6 @@
 Flask
 Gunicorn
+flask_cors
+pandas
+scikit-learn
+xgboost
